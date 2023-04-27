@@ -1,0 +1,16 @@
+[
+{
+  "modid": "autotipplus",
+  "name": "Pit Quick Maths",
+  "description": "Automatically answers Pit's quick maths questions under 1-3s",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["Yan."],
+  "credits": "Me, only myself. Vote Yan. for 2024 US elections",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
