@@ -1,16 +1,14 @@
-package me.yanjobs.pitutils.events;
+package me.yanjobs.pitquickmathslunar.events;
 
 import club.maxstats.weave.loader.api.event.ChatReceivedEvent;
 import club.maxstats.weave.loader.api.event.SubscribeEvent;
 
 import java.io.IOException;
-import java.util.Objects;
 import java.util.Timer;
 
 import java.util.TimerTask;
 import java.util.concurrent.ThreadLocalRandom;
 
-import me.yanjobs.pitutils.utils.Config;
 import net.minecraft.client.Minecraft;
 
 public class ChatEvent {
