@@ -1,7 +1,10 @@
 package me.yanjobs.pitquickmathslunar.events;
 
-import club.maxstats.weave.loader.api.event.ChatReceivedEvent;
-import club.maxstats.weave.loader.api.event.SubscribeEvent;
+import net.minecraft.util.ChatComponentText;
+import net.minecraft.util.EnumChatFormatting;
+import net.minecraft.util.IChatComponent;
+import net.weavemc.loader.api.event.ChatReceivedEvent;
+import net.weavemc.loader.api.event.SubscribeEvent;
 
 import java.io.IOException;
 import java.util.Timer;
@@ -154,19 +157,18 @@ public class ChatEvent {
 
         if (quickMathMessage.contains("QUICK MATHS! Solve: ")) {
             String result = result(quickMathMessage);
+            Timer timer = new Timer("Timer");
+            long delay = (long) simpleRandom(1000, 3000);
 
-            // Creating a new task
             TimerTask task = new TimerTask() {
                 @Override
                 public void run() {
                     Minecraft.getMinecraft().thePlayer.sendChatMessage(result);
+                    Minecraft.getMinecraft().thePlayer.addChatMessage(new ChatComponentText(EnumChatFormatting.DARK_GRAY + "Quick Maths> Answered in " + delay + " - Yan-Jobs"));
                 }
             };
-            Timer timer = new Timer("Timer");
-            long delay = (long) simpleRandom(1000, 3000);
-            // Timing the task with the delay created above
+
             timer.schedule(task, delay);
         }
-
     }
 }
